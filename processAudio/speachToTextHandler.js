@@ -1,6 +1,8 @@
 import speech from '@google-cloud/speech'
 import {config} from 'dotenv'
 import fs from 'fs'
+import gcpScrets from '@google-cloud/secret-manager'
+
 config()
 
 export const speechToTextHandler = async () => {
