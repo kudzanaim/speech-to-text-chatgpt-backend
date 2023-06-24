@@ -8,6 +8,7 @@ config()
 export const speechToTextHandler = async () => {
   const speechCredentialKey = process.env.ENVIROMENT === 'dev' ? JSON.parse(process?.env?.SA_KEY) :  await((async()=>{
     const [secret] = await (new gcpScrets.v1.SecretManagerServiceClient().getSecret({ name: 'speechCredentialKey'}))
+    console.log(`Log - gcPsecret :: speechToTextHandler :: ${JSON.stringify(secret)}`)
     return secret
   }))()
   console.log(`Log - speechCredentialKey :: speechToTextHandler :: ${JSON.stringify(speechCredentialKey)}`)
