@@ -4,7 +4,10 @@ import fs from 'fs'
 config()
 
 export const speechToTextHandler = async () => {
-  console.log(`Log - speechCredentialKey :: speechToTextHandler :: Entry`)
+  console.log(`Log - speechCredentialKey :: speechToTextHandler :: Entry :: ${console.log({
+    key: process?.env?.SA_KEY,
+    type: typeof process?.env?.SA_KEY
+  })}`)
   try {
     const client = new speech.SpeechClient({credentials: JSON.parse(process?.env?.SA_KEY)})
     const [response] = await client.recognize({
