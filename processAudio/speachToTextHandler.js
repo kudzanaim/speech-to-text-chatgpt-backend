@@ -9,8 +9,7 @@ export const speechToTextHandler = async () => {
     type: typeof process?.env?.SA_KEY
   })}`)
   try {
-    const serviceKey = process.env.ENVIROMENT === 'dev' ? JSON.parse(process?.env?.SA_KEY) : process?.env?.SA_KEY
-    const client = new speech.SpeechClient({credentials: serviceKey})
+    const client = new speech.SpeechClient({credentials: JSON.parse(process?.env?.SA_KEY)})
     const [response] = await client.recognize({
       config: {
         sampleRateHertz: 48000,
