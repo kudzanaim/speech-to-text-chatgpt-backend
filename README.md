@@ -4,6 +4,7 @@ It converts .wav audio to text using [Speech-to-Text API](https://cloud.google.c
 <div dir="auto">
     <img src="https://img.shields.io/badge/GoogleCloud-%234285F4.svg?style=for-the-badge&logo=google-cloud&logoColor=white" style="max-width: 100%;">
     <img src="https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white" style="max-width: 100%;">
+    	<img src="https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white" style="max-width: 100%;">
 </div>
 <br>
 
